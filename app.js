@@ -18,7 +18,11 @@ var seanceRouter = require('./routes/seance');
 var absenceRouter = require('./routes/absence');
 
 var app = express();
-db.sequelize.sync().then();
+db.sequelize.sync().then(()=>{
+  console.log("Synced db.");
+}).catch((err)=>{
+  console.log("Failed to syn db :" + err.message);
+});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

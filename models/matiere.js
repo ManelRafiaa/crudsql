@@ -16,10 +16,7 @@ module.exports=(sequelize,DataTypes)=>{
             type:DataTypes.INTEGER,
             allowNull:false
         },
-        enseignant:{
-            type:DataTypes.STRING,
-            allowNull:false
-        }
+        
     });
     return Matiere;
 }

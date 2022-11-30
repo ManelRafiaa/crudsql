@@ -1,6 +1,6 @@
 
 var express = require('express');
-const { getAllAbsences, getAbsence, createAbsence, deleteAbsence, updateAbsence } = require('../controllers/absence');
+const { getAllAbsences, getAbsence, createAbsence, deleteAbsence, updateAbsence } = require('../controllers/absenceController');
 var router = express.Router();
 
 router.get('/', getAllAbsences);
