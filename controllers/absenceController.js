@@ -29,7 +29,7 @@ const getAbsence = async (req, res) => {
         where: { id: absentId },
       });
       if (!absentData) {
-        throw new Error("User not found");
+        throw new Error("Absent not found");
       }
       res.status(200).json({
         absentData

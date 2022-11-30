@@ -1,12 +1,11 @@
 
-const matiere = require("../models/matiere");
-const { absence } = require("../models/matiere");
+const { matiere } = require("../models");
 
 
 const createMatiere = async (req, res, next) => {
   const {matierename ,nbrheure, coef } = req.body;
   try {
-    const createAbsence = await matiere.create({
+    const createMatiere = await matiere.create({
     matierename,
     nbrheure,
     coef,
@@ -95,7 +94,7 @@ const getMatiere = async (req, res) => {
       const { matiereId } = req.params;
       const matiereData = await matiere.findOne({
         where: { id: matiereId },
-        include: "users",
+        include: "absences",
       });
       if (!matiereData) {
         throw new Error("matiere not found");

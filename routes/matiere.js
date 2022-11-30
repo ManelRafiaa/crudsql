@@ -5,10 +5,10 @@ const { createMatiere, getAllMatiere, updateMatiere, deleteMatiere, getMatiere, 
 var router = express.Router();
 
 router.get('/', getAllMatiere);
-router.get('/:absentId', getMatiere);
+router.get('/:matiereId', getMatiere);
 router.post('/', createMatiere);
-router.put('/:absentId', updateMatiere);
-router.delete('/:absentId', deleteMatiere);
+router.put('/:matiereId', updateMatiere);
+router.delete('/:matiereId', deleteMatiere);
 router.get('/:matiereId', findAbsenceByMatiere);
 
 module.exports = router;
